@@ -1,0 +1,80 @@
+/* .wrap {
+  padding: 125px;
+  background-color: aqua;
+} */
+
+/* title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+/* GENERAL BODY STYLING - 'display: flex': Centers content within the body using Flexbox. 'justify-content: center': Horizontally centers the carousel. 'align-items: center': Vertically centers the carousel. 'height: 100vh': Sets the height of the body to the full viewport height. 'margin: 0': Removes default body margins. 'background-color: #825CFF': Gives the background a purple shade. */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 25;
+    background-color: hsl(295, 100%, 68%);
+  }
+  
+  /* CAROUSEL CONTAINER STYLING */
+  .carousel {
+    width: 600px;
+    overflow: hidden;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#825CFF, #825CFF),
+                      linear-gradient(90deg, #ff7eb3, #ff758c, #825CFF);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* WRAPPER FOR IMAGES */
+  .wrap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: slide 15s linear infinite;
+    animation-play-state: running;
+  }
+  
+  /* .wrap img {
+    padding: 25px;
+  } */
+  
+  /* IMAGE STYLING */
+  .wrap img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+  }
+  
+  /* IMAGE HOVER EFFECT */
+  .wrap img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.8), 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(242, 14, 14, 0.8);
+  }
+  
+  /* PAUSE ANIMATION ON HOVER */
+  .wrap:hover {
+    animation-play-state: paused;
+    /* if animation-play-state: paused; */
+  }
+  
+  /* KEYFRAMES FOR SLIDING ANIMATION */
+  @keyframes slide {
+    to {
+      translate: calc(-4 * 250px);
+    }
+  }
