@@ -1,0 +1,51 @@
+<!-- 1. DOCUMENT TYPE - Declares the document type and version of HTML (HTML5 in this case). -->
+<!DOCTYPE html>
+
+<!-- 2. LANGUAGE (ROOT) ELEMENT - The root element of the HTML document. The lang="en" attribute specifies the language of the document as English. -->
+<html lang="en">
+
+<!-- 3. HEAD SECTION - Contains metadata and links to resources for the webpage. <meta charset="UTF-8">: Sets the character encoding to UTF-8, which supports most characters from different languages. <meta http-equiv="X-UA-Compatible" content="IE=edge">: Ensures compatibility with Internet Explorer's latest rendering engine <meta name="viewport" content="width=device-width, initial-scale=1.0">: Ensures the page is responsive by setting the viewport width to the device width and scaling it appropriately. <title>New Year Countdown 2025</title>: Sets the title of the webpage, which appears in the browser tab. <link rel="stylesheet" href="styles.css">: Links an external CSS file (styles.css) to style the webpage. -->
+<head>
+  <meta charset="UTO-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Countdown 2025</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- 4. BODY SECTION - Contains the main content of the webpage. <div id="countdown">: A container for the countdown elements. Inside this div, there are multiple <div class="countdown-item"> elements, each representing a time unit (days, hours, minutes, seconds). Each countdown-item contains: <span class="countdown-value" id="days/hours/minutes/seconds">: Placeholder for the numerical value of the countdown. <span class="countdown-label">Days/Hours/Minutes/Seconds</span>: Label for the respective time unit. -->
+<body>
+  <div id="page-container">
+    <div id="title-container">
+      <div class="title">
+        I made this!
+      </div>
+      <div class="title">
+        Happy New Year from DLaids
+      </div>
+    </div>
+    <div id="countdown">
+      <div class="countdown-item">
+        <span class="countdown-value" id="days"></span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-value" id="hours"></span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-value" id="minutes"></span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-value" id="seconds"></span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+</div>
+
+  <!-- 5. LINK TO JAVASCRIPT FILE - Links an external JavaScript file (script.js) to add functionality, such as calculating and updating the countdown dynamically. -->
+   <script src="script.js"></script>
+  </body>
+</html>
+

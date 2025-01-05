@@ -1,0 +1,93 @@
+/* Example media query for devices with a max width of 600px */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    scale: 60%;
+  }
+}
+
+
+/* Example using Flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* GLOBAL BODY STYLING - 'display: flex'; Makes the body a flex container to enable flexible layout management.'justify-content: center'; Horizontally centers the content within the body. 'align-items: center'; Vertically centers the content within the body. 'height: 100vh'; Sets the height of the body to 100% of the viewport height. 'margin: 0'; Removes default margins from the body. */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* TITLE CONTAINER STYLING */
+  #title-container {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(to right, blue, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  /* flex: center; */
+    align-items: center;
+    padding: 50px;
+  }
+  
+  /* TITLE STYLING */
+  .title {
+    padding: 5px;
+  }
+  
+  /* COUNTDOWN CONTAINER STYLING - 'display: flex'; Makes the countdown container a flexbox to organize its child elements. 'justify-content: space-between'; Spaces out the countdown items evenly. 'align-items: center'; Vertically aligns the countdown items within the container. 'font-size: 3rem'; Sets a base font size for text inside the container. 'color: #fff'; Sets the text color to white. 'background: #000'; Sets the background color to black. 'padding: 1rem'; Adds padding inside the container for spacing. 'border-radius: 5px'; Rounds the corners of the container. 'box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)'; Adds a subtle shadow for a 3D effect. */
+  #countdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    color: #fff;
+    background: #000;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  /* COUNTDOWN ITEM STYLING - 'display: flex'; Makes each countdown item a flex container. 'flex-direction: column'; Arranges child elements (value and label) vertically. 'align-items: center'; Centers child elements horizontally. 'margin: 0 1rem'; Adds horizontal spacing between countdown items. */
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    /* padding: 3rem; */
+  }
+  
+  /* COUNTDOWN VALUE STYLING - 'font-size: 3rem'; Sets a large font size for the countdown value. 'font-weight: bold'; Makes the text bold. 'margin: 0'; Removes any default margin. 'color: #f00'; Sets the text color to red. 'animation: pulse 3s infinite'; Applies a pulsating animation to the value, repeating infinitely every 3 seconds. */
+  .countdown-value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #f00;
+    animation: pulse 1s infinite;
+  }
+  
+  /* COUNTDOWN LABEL STYLING - 'font-size: 1.5rem'; Sets a smaller font size for the labels. 'text-transform: uppercase'; Converts the text to uppercase. 'color: #999'; Sets the text color to a light gray. 'margin: 0'; Removes default margins. */
+  .countdown-label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0;
+  }
+  
+  /* PULSE ANIMATION - @keyframes pulse: Defines an animation called "pulse." 0% and '100% {transform: scale(1)'; }: At the start and end,the element is at its normal size. '50% {transform: scale(1.1); }': At the midpoint,the element slightly enlarges (110% of its original size). The animation creates a smooth pulsating effect for the countdown value. */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
