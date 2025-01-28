@@ -1,0 +1,116 @@
+<!-- from https://www.codewithfaraz.com/content/438/create-simple-webpage-layout-using-html-and-css -->
+
+<!-- 1. DOCTYPE and HTML Tag -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 2. Head Section ('<head>') -->
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage Layout</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- Google fonts link: imports the Poppins font to style the  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"/>
+    <!-- Font awesome link: adds icons for enhance design (e.g., checkmarks, phone icons). -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<!-- 3. Body Section ('<body>') -->
+  <!-- anchor tags <a> provide links to scroll to specific sections of the webpage. -->
+<nav class="navbar">
+  <!-- <div class="logo">ModernUI</div> -->
+  <div><a href="#ModernUI">ModernUI</a></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section ('#home') -->
+<section id="home" class="hero">
+  <h1>Elevate Your Web Experience</h1>
+  <p>Create modern, fast, and responsibve websites with ease.</p>
+  <a href="#services" class="btn">Explore Services</a>
+</section>
+
+<!-- Services Section ('#services') -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+    <h3>Design</h3>
+    <p>We create beautiful and user–friendly designs tailored to your brand identity.</p>
+    </div>
+    <div class="card">
+      <h3>Development</h3>
+      <p>Our code ensures fast, secure, and scalable websites across all platforms.</p>
+    </div>
+    <div class="card">
+      <h3>SEO Optimization</h3>
+      <p>We improve your site search engine visibility to increase traffic and leads.</p>
+    </div>
+  </div>
+ </section>
+ 
+ <!-- About Section ('#about') -->
+<section id="about" class="about">
+  <h2>Who We Are</h2>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="https://via.placeholder.com/500x300" alt="About Us Image">
+    </div>
+    <div class="about-content">
+      <h3>Our Mission</h3>
+      <p>At ModernUI, we aim to create impactful, digital experiences…</p>
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <!-- <li><i class="fab fa-rebel" style="font-size: 45px;" aria-hidden="true"></i>create event, customized solutions</li>
+        <li><i class="fas fa-check-circle" style="font-size: 45px;"></i> experienced team of experts</li>
+        <li><i class="fas fa-check-circle" style="font-size: 22px;"></i> Dedicated Customer Support</li> -->
+        <li><i class="fab fa-rebel" aria-hidden="true"></i>create event, customized solutions</li>
+        <li><i class="fas fa-check-circle"></i> experienced team of experts</li>
+        <li><i class="fas fa-check-circle"></i> Dedicated Customer Support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- <border-box style="border: solid 2px black;">stuff here</border-box> -->
+
+<!-- Contact Section ('#contact') -->
+ <section id="contact" class="contact">
+  <h2 class="clr-g">Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form action="http://localhost:3000/submit" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="text" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="contact-details">
+      <h3 class="clr-g">Contact Information</h3>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@modernui.com">info@modernui.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i>Web Street, Tech City, USA</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+ </section>
+<!-- In above section, Input type="text" is used for single-line text input.
+ Whereas text area is used for multi-line text input. -->
+
+ <!-- Footer Section -->
+<footer class="footer">
+  <p>© 2024 ModernUI. All rights reserved.</p>
+</footer>
